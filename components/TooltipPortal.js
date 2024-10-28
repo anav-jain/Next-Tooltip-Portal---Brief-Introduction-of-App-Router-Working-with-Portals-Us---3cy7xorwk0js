@@ -2,9 +2,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const TooltipPortal = ({ content }) => {
+const TooltipPortal = ({ content, position }) => {
     return ReactDOM.createPortal(
-        <div style={tooltipStyles}>
+        <div style={{ ...tooltipStyles, left: position.x, top: position.y }}>
             {content}
         </div>,
         document.body // Render the tooltip in the body
