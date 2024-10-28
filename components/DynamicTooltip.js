@@ -2,10 +2,10 @@
 import React from 'react';
 import TooltipPortal from './TooltipPortal';
 
-const DynamicTooltip = ({ isVisible }) => {
+const DynamicTooltip = ({ isVisible, position }) => {
     return (
         <>
-            {isVisible && <TooltipPortal content="This is a tooltip" />}
+            {isVisible && <TooltipPortal content="This is a tooltip" position={position} />}
         </>
     );
 };
